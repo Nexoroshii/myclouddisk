@@ -1,0 +1,4 @@
+{
+  "serverPort": 5000,
+  "mongoURL": "mongodb+srv://emoisei1:password1234@cloud.a7q9a2b.mongodb.net/?retryWrites=true&w=majority"
+}
