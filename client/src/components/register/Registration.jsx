@@ -27,7 +27,7 @@ const Registration = () => {
         className="registration__btn"
         onClick={() => registration(email, password)}
       >
-        Войти
+        Зарегистрироваться
       </button>
     </div>
   );
