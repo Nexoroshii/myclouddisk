@@ -1,4 +1,5 @@
 import axios from "axios";
+import { setUser } from "../reducers/userReducer";
 
 export const registration = async (email, password) => {
   try {
@@ -25,7 +26,8 @@ export const login = async (email, password) => {
           password: password,
         }
       );
-      console.log(response.data);
+      dispatch(setUser(response.data.user));
+      await console.log(response.data);
     } catch (e) {
       alert(e.response.data.message);
     }
