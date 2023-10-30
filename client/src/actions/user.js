@@ -16,7 +16,7 @@ export const registration = async (email, password) => {
   }
 };
 
-export const login = async (email, password) => {
+export const login = (email, password) => {
   return async (dispatch) => {
     try {
       const response = await axios.post(
@@ -26,8 +26,8 @@ export const login = async (email, password) => {
           password: password,
         }
       );
+
       dispatch(setUser(response.data.user));
-      await console.log(response.data);
     } catch (e) {
       alert(e.response.data.message);
     }
